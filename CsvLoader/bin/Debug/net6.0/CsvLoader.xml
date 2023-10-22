@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CsvLoader</name>
+    </assembly>
+    <members>
+        <member name="M:CsvLoader.Controllers.CsvLoaderController.UploadCsv(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload CSV Files and saves in data base
+            </summary>
+            <remarks>
+            The CSV file must contain a name, city, country and favorite sport following the example: \
+            \
+            name, city, country, favorite_sport \
+            John Doe,New York, USA, Basketball \
+            Jane Smith, London, United Kingdom, Football \
+            Mike Johnson,Paris,France,Tennis \
+            Karen Lee,Tokyo,Japan,Swimming \
+            Tom Brown,Sydney,Australia,Racing \
+            Emma Wilson,Berlin,Germany,Basketball \
+            \
+            If there is any repeated data, it will not be saved in the database (a message will be returned with the corresponding duplicated users)
+            </remarks>
+        </member>
+        <member name="M:CsvLoader.Controllers.CsvLoaderController.SearchUsers(System.String)">
+            <summary>
+            Search the uploaded CSV, filtering by a query parameter 
+            </summary>
+            <remarks>
+            The search will be done using case insensitive, bringing all results that contain the sent parameter \
+            If the search does not find results, it will bring up the message "Users not found"</remarks>
+        </member>
+    </members>
+</doc>
